@@ -36,29 +36,38 @@ html, body{
 }
 
 #main-menu ul{
-	float:left;
+/*	float:left;*/
 }
 
-#main-menu li{
+#main-menu li {
 	display: inline;
+}
+
+#main-menu li a {
+	display: inline-block;
+	padding: 20px;
 }
 
 .hdr1 > div {
 	text-align: left;
 }
 
-.hdr1{
-	width: 100%
-	float:left;
+.hdr1 {
+	width: 100%;
+/*	float: left;*/
 	display: inline;
  }
 
 .head{
-	float:left;
+/*	float:left;*/
 	text-align: left;
 	vertical-align: top;
 	height: auto;
 	padding: 0;
+}
+
+.head a {
+	width: auto;
 }
 
 .head-menu{
@@ -66,7 +75,7 @@ html, body{
 }
 
 .slider{
-	height: 120px;
+/*	height: 120px;*/
 	color: black;
 	text-align: center;
 	font-size: 400%;
