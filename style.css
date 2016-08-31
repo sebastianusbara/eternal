@@ -1,0 +1,112 @@
+/*
+ Theme Name:   eternal
+ Theme URI:    http://example.com/shop-one-column/
+ Description:  eternal Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     shop-one-column
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  eternal
+*/
+
+html, body{
+	height:100%;
+}
+
+.main{
+	background-color: #FFFFFF;
+	width: 800px;
+}
+
+.content-main{
+	margin-top: 0;
+	width: auto;
+	float: left;
+}
+
+.post-main{
+	width: auto;
+}
+
+.wholePage{
+	margin:30px;
+}
+
+#main-menu ul{
+	float:left;
+}
+
+#main-menu li{
+	display: inline;
+}
+
+.hdr1 > div {
+	text-align: left;
+}
+
+.hdr1{
+	width: 100%
+	float:left;
+	display: inline;
+ }
+
+.head{
+	float:left;
+	text-align: left;
+	vertical-align: top;
+	height: auto;
+	padding: 0;
+}
+
+.head-menu{
+	float:right;
+}
+
+.slider{
+	height: 120px;
+	color: black;
+	text-align: center;
+	font-size: 400%;
+	background-color: yellow;
+}
+
+.content{
+	float:none;
+	width: 800px;
+	margin-top: 0;
+}
+
+.container{
+	display: table;
+	width: 100%;
+}
+
+.main-content{
+	width: 70%;
+	display: table-cell;
+}
+
+.side-content{
+	width: 30%;
+	background-color: blue;
+	display: table-cell;
+}
+
+<?php
+function my_theme_enqueue_styles() {
+
+    $parent_style = 'parent-style'; // This is 'shop-one-column' for the eternal theme.
+
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        array( $parent_style ),
+        wp_get_theme()->get('Version')
+    );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+?>
+

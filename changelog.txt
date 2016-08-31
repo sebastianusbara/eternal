@@ -1,0 +1,7 @@
+== changelog ==
+
+= 1.4.6 =
+- Language - Uighur, Ukrainian, Vietnamese
+
+= 1.4.5 =
+- Language - Czech
