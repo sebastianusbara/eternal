@@ -79,7 +79,30 @@ html, body{
 	color: black;
 	text-align: center;
 	font-size: 400%;
-	background-color: yellow;
+	border-style: solid;
+}
+
+.slider-image{
+	clear: both;
+	z-index: 500;
+	width: 100px;
+	height: 100%;
+}
+
+.slider-arrow{
+	z-index: 1000;
+	position: absolute;
+}
+
+.slider-arrow-right{
+	width: 32px;
+	float: right;
+}
+
+.slider-arrow-left{
+	transform: rotate(180deg);
+	width: 32px;
+	float: left;
 }
 
 .content{

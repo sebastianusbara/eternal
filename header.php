@@ -22,10 +22,33 @@
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			</div>
 		</div>
-		<div class="slider" id="brand-slide">Slider</div>
+		<div class="slider" id="brand-slide">
+			<div class="slider-arrow">
+				<div class="slider-arrow-left"><img src="http://localhost/wordpress/wp-content/uploads/2016/09/right-arrow.png" alt=""></div>
+				<div class="slider-arrow-right"><img src="http://localhost/wordpress/wp-content/uploads/2016/09/right-arrow.png" alt=""></div>
+			</div>
+			<div class="slider-image"><img src="http://localhost/wordpress/wp-content/uploads/2016/09/WIN_20160819_18_41_17_Pro.jpg" alt=""></div>		
+		</div>
 	</div>
 
-	
+<script type="text/javascript">
+	// $(function () {
+	//     var $image = $('#container').children('img');
+	//     function animate_img() {
+	//         if ($image.css('top') == '0px') {
+	//             $image.animate({top: '-175px'}, 5000, function () {
+	//                 animate_img();
+	//             });
+	//         } else {console.log('2');
+	//             $image.animate({top: '0px'}, 5000, function () {
+	//                 animate_img();
+	//             });
+	//         }
+	//     }
+	//     animate_img();
+	// });
+
+</script>
 
 
 
