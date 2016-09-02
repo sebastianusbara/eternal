@@ -6,12 +6,13 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 </head>
 <body <?php body_class(); ?>>
-
 <div class="wholePage">
 	<div class="main">
 		<div class="hdr1">
+			<?php echo do_shortcode('[slick-carousel]'); ?>
 			<div class="head-menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 
 								  'container_id' => 'main-menu' ) ); ?>
