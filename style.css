@@ -82,29 +82,6 @@ html, body{
 	border-style: solid;
 }
 
-.slider-image{
-	clear: both;
-	z-index: 500;
-	width: 100px;
-	height: 100%;
-}
-
-.slider-arrow{
-	z-index: 1000;
-	position: absolute;
-}
-
-.slider-arrow-right{
-	width: 32px;
-	float: right;
-}
-
-.slider-arrow-left{
-	transform: rotate(180deg);
-	width: 32px;
-	float: left;
-}
-
 .content{
 	float:none;
 	width: 800px;
@@ -125,6 +102,19 @@ html, body{
 	width: 30%;
 	background-color: blue;
 	display: table-cell;
+}
+
+.search-main{
+	display: inline;
+}
+
+.serch-txt{
+	width: 100px;
+	float: right;
+}
+
+.serch-btn{
+	float: right;
 }
 
 <?php

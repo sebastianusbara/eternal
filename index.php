@@ -28,7 +28,13 @@
 								<?php endif; ?>
 					<?php endif; ?>
 				</div>
-				<div class="side-content"></div>
+				<div class="side-content">
+					<?php if ( is_active_sidebar( 'footbar1' ) ) : ?>
+						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+							<?php dynamic_sidebar( 'footbar1' ); ?>
+						</div><!-- #primary-sidebar -->
+					<?php endif; ?>
+				</div>
 			</div>
 		</div>
 
