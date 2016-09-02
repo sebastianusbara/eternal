@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />	
 	<meta name="viewport" content="width=device-width" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
 	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
@@ -24,30 +25,12 @@
 			</div>
 		</div>
 		<div class="slider" id="brand-slide">
-			<div class="slider-arrow">
-				<div class="slider-arrow-left"><img src="http://localhost/wordpress/wp-content/uploads/2016/09/right-arrow.png" alt=""></div>
-				<div class="slider-arrow-right"><img src="http://localhost/wordpress/wp-content/uploads/2016/09/right-arrow.png" alt=""></div>
-			</div>
-			<div class="slider-image"><img src="http://localhost/wordpress/wp-content/uploads/2016/09/WIN_20160819_18_41_17_Pro.jpg" alt=""></div>		
+			<?php echo do_shortcode('[lgx-carousel]'); ?>
 		</div>
 	</div>
 
 <script type="text/javascript">
-	// $(function () {
-	//     var $image = $('#container').children('img');
-	//     function animate_img() {
-	//         if ($image.css('top') == '0px') {
-	//             $image.animate({top: '-175px'}, 5000, function () {
-	//                 animate_img();
-	//             });
-	//         } else {console.log('2');
-	//             $image.animate({top: '0px'}, 5000, function () {
-	//                 animate_img();
-	//             });
-	//         }
-	//     }
-	//     animate_img();
-	// });
+
 
 </script>
 
