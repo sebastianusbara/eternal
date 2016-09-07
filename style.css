@@ -12,13 +12,38 @@
  Text Domain:  eternal
 */
 
+@font-face {
+    font-family: dodger3;
+    src: url(font/dodger3.ttf);
+    font-weight:400;
+}
+
 html, body{
+	color: #FFFFFF;
 	height:100%;
 }
 
 .main{
-	background-color: #FFFFFF;
+	background:rgba(0,0,0,0.9);
 	width: 800px;
+}
+
+.header{
+	background:rgba(0,0,0,0.9);
+	width: 800px;
+	margin: 0 auto;
+}
+
+.user-menu{
+	margin: 0 5px -20px 0px;
+	text-align: right;
+}
+
+.user-menu a{
+	font-size: x-small;
+	text-decoration: none;
+	text-align: right;
+	color: #FFFFFF;
 }
 
 .content-main{
@@ -35,6 +60,14 @@ html, body{
 	margin:30px;
 }
 
+.post-main h1 a {
+	color: #FFFFFF;
+}
+
+.categories {
+	color: #FFFFFF;
+}
+
 #main-menu ul{
 /*	float:left;*/
 }
@@ -46,17 +79,32 @@ html, body{
 #main-menu li a {
 	display: inline-block;
 	padding: 20px;
+	text-decoration: none;
+	color: #FFFFFF;
+	border-radius: 15px;
+	border: solid;
+	border-color: transparent;
+}
+
+#main-menu li a:hover{
+	border-color: white;
 }
 
 .hdr1 > div {
 	text-align: left;
+	min-height: 0px;
 }
 
 .hdr1 {
+	font-family: dodger3;
 	width: 100%;
 /*	float: left;*/
-	display: inline;
+	display: static;
  }
+
+.hdr1::after {
+	content: normal;
+ } 
 
 .head{
 /*	float:left;*/
@@ -64,10 +112,15 @@ html, body{
 	vertical-align: top;
 	height: auto;
 	padding: 0;
+	margin-top: 20px;
 }
 
 .head a {
 	width: auto;
+}
+
+.head img{
+	margin-bottom: 0px;
 }
 
 .head-menu{
@@ -79,7 +132,8 @@ html, body{
 	color: black;
 	text-align: center;
 	font-size: 400%;
-	background-color: yellow;
+	border-top: solid;
+	border-bottom: solid; 
 }
 
 .content{
@@ -100,10 +154,51 @@ html, body{
 
 .side-content{
 	width: 30%;
-	background-color: blue;
 	display: table-cell;
 }
 
+.search-main{
+	display: inline;
+}
+
+.serch-txt{
+	width: calc(100% - 70px);
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.serch-btn{
+	position: relative;
+	top: 7px;
+	content:url(http://placehold.it/350x150);
+	border: none;
+}
+
+.img-square{
+	margin: 10px;
+}
+
+.slick-prev{
+	opacity: 0;
+}
+
+.slick-next{
+	opacity: 0;
+}
+
+.categories{
+	opacity: 0;
+}
+
+.post-main > h1{
+	border-top: solid;
+	border-bottom: solid;
+	border-color: red;
+}
+
+.post-main{
+	margin: 0;
+}
 <?php
 function my_theme_enqueue_styles() {
 
