@@ -25,12 +25,12 @@ html, body{
 
 .main{
 	background:rgba(0,0,0,0.9);
-	width: 800px;
+	width: 100%;
 }
 
 .header{
 	background:rgba(0,0,0,0.9);
-	width: 800px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -56,8 +56,8 @@ html, body{
 	width: auto;
 }
 
-.wholePage{
-	margin:30px;
+.wholePage {
+	margin: 10px;
 }
 
 .post-main h1 a {
@@ -142,7 +142,7 @@ html, body{
 
 .content{
 	float:none;
-	width: 800px;
+	width: 100%;
 	margin-top: 0;
 }
 
@@ -203,6 +203,17 @@ html, body{
 .post-main{
 	margin: 0;
 }
+
+@media only screen and (min-width: 768px) {
+	.wholePage {
+		margin: 30px;
+	}
+
+	.main, .header, .content {
+		width: 800px;
+	}
+}
+
 <?php
 function my_theme_enqueue_styles() {
 

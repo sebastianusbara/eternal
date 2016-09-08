@@ -16,7 +16,6 @@
 			<?php echo user_signin() ?>
 		</div>
 		<div class="hdr1">
-			<?php echo do_shortcode('[slick-carousel]'); ?>
 			<div class="head-menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 
 								  'container_id' => 'main-menu' ) ); ?>
