@@ -7,11 +7,13 @@
 	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
-	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 </head>
 <body <?php body_class(); ?>>
 <div class="wholePage">
-	<div class="main">
+	<div class="header">
+		<div class="user-menu">
+			<?php echo user_signin() ?>
+		</div>
 		<div class="hdr1">
 			<?php echo do_shortcode('[slick-carousel]'); ?>
 			<div class="head-menu">
@@ -21,11 +23,11 @@
 
 			<div class="head">
 				<?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 			</div>
 		</div>
 		<div class="slider" id="brand-slide">
-			<?php echo do_shortcode('[lgx-carousel]'); ?>
+			<?php echo do_shortcode('[slick-carousel]'); ?>
 		</div>
 	</div>
 

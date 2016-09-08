@@ -110,4 +110,32 @@ function numediaweb_custom_user_profile_fields($user) {
 }
 add_action('show_user_profile', 'numediaweb_custom_user_profile_fields');
 add_action('edit_user_profile', 'numediaweb_custom_user_profile_fields');
+
+$defaults = array(
+    'default-image'          => '',
+    'width'                  => 0,
+    'height'                 => 0,
+    'flex-height'            => false,
+    'flex-width'             => false,
+    'uploads'                => true,
+    'random-default'         => false,
+    'header-text'            => true,
+    'default-text-color'     => '',
+    'wp-head-callback'       => '',
+    'admin-head-callback'    => '',
+    'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-header', $defaults );
+
+function user_signin(){
+    $current_user = wp_get_current_user();
+    if(!isset($current_user->roles[0]))
+    {
+        return '<a href="wp-login.php">sign in</a>';
+    }
+    else
+    {      
+        return '<a href='.wp_logout_url().'>Logout</a>';
+    }
+}
 ?>
