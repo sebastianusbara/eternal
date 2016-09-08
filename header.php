@@ -7,6 +7,7 @@
 	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
+	<?php show_admin(); ?>
 </head>
 <body <?php body_class(); ?>>
 <div class="wholePage">
@@ -40,3 +41,4 @@
 
 	<div class="main">
 		<div class="content-main">
+			
